@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capture Pro Photography web</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#111;
+    color:white;
+    scroll-behavior:smooth;
+}
+
+/* Navbar */
+.navbar{
+    position:fixed;
+    width:100%;
+    top:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:rgba(0,0,0,0.9);
+    z-index:1000;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:gold;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+}
+
+.nav-links li{
+    margin-left:20px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:gold;
+}
+
+/* Carousel */
+.carousel{
+    margin-top:70px;
+    height:400px;
+    position:relative;
+    overflow:hidden;
+}
+
+.slide{
+    display:none;
+    height:100%;
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.slide::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+}
+
+.slide span{
+    position:relative;
+    z-index:2;
+}
+
+.slide.active{
+    display:flex;
+}
+
+/* Sections */
+.section{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.section h2{
+    margin-bottom:30px;
+    color:gold;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:#222;
+    width:220px;
+    border-radius:10px;
+    overflow:hidden;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+}
+
+.card h4{
+    padding:15px;
+}
+
+.card:hover{
+    transform:scale(1.05);
+    background:gold;
+    color:black;
+}
+
+/* Contact Form */
+.contact-form{
+    max-width:400px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+}
+
+.contact-form input,
+.contact-form textarea{
+    margin:10px 0;
+    padding:12px;
+    border:none;
+    border-radius:5px;
+}
+
+.contact-form button{
+    padding:12px;
+    background:gold;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* Footer */
+footer{
+    background:url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32') no-repeat center center/cover;
+    padding:60px 20px;
+    text-align:center;
+    font-weight:bold;
+    margin-top:40px;
+}
+
+footer p{
+    background:rgba(0,0,0,0.7);
+    display:inline-block;
+    padding:10px 20px;
+    border-radius:5px;
+}
+
+@media(max-width:768px){
+    .nav-links{
+        display:none;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">CapturePro 📸</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#section1">Cameras</a></li>
+        <li><a href="#section2">Lenses</a></li>
+        <li><a href="#section3">Video Gear</a></li>
+        <li><a href="#section4">Lighting</a></li>
+        <li><a href="#section5">Accessories</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Carousel -->
+<section class="carousel" id="home">
+    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1510127034890-ba27508e9f1c');">
+        <span>Professional DSLR & Mirrorless Cameras</span>
+    </div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1502920917128-1aa500764b5f');">
+        <span>Premium Lenses & Studio Lighting</span>
+    </div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1492724441997-5dc865305da7');">
+        <span>4K & 8K Videography Equipment</span>
+    </div>
+</section>
+
+<!-- Cameras -->
+<section class="section" id="section1">
+    <h2>Cameras</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1519183071298-a2962be96e79">
+            <h4>DSLR Camera</h4>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac">
+            <h4>Mirrorless Camera</h4>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1519183071298-a2962be96e79">
+            <h4>Compact Camera</h4>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1516728778615-2d590ea1856f">
+            <h4>Action Camera</h4>
+        </div>
+    </div>
+</section>
+
+<!-- Lenses -->
+<section class="section" id="section2">
+    <h2>Lenses</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1510127034890-ba27508e9f1c">
+            <h4>Prime Lens</h4>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944">
+            <h4>Zoom Lens</h4>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1519183071298-a2962be96e79">
+            <h4>Telephoto Lens</h4>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1502920917128-1aa500764b5f">
+            <h4>Wide Angle Lens</h4>
+        </div>
+    </div>
+</section>
+
+<!-- Video Gear -->
+<section class="section" id="section3">
+    <h2>Videography Gear</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+            <h4>4K Camcorder</h4>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32">
+            <h4>Gimbal</h4>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1508615070457-7baeba4003ab">
+            <h4>Drone</h4>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac">
+            <h4>Video Switcher</h4>
+        </div>
+    </div>
+</section>
+
+<!-- Lighting -->
+<section class="section" id="section4">
+    <h2>Lighting Equipment</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1502920917128-1aa500764b5f">
+            <h4>Softbox</h4>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+            <h4>Ring Light</h4>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1519183071298-a2962be96e79">
+            <h4>LED Panel</h4>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1508615070457-7baeba4003ab">
+            <h4>Flash Unit</h4>
+        </div>
+    </div>
+</section>
+
+<!-- Accessories -->
+<section class="section" id="section5">
+    <h2>Accessories</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32">
+            <h4>Tripod</h4>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac">
+            <h4>Memory Card</h4>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1516728778615-2d590ea1856f">
+            <h4>Microphone</h4>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1510127034890-ba27508e9f1c">
+            <h4>Camera Bag</h4>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="4"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 CapturePro Photography Store | All Rights Reserved</p>
+</footer>
+
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+function showSlide(){
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+    index = (index + 1) % slides.length;
+}
+setInterval(showSlide, 4000);
+</script>
+
+</body>
+</html>
